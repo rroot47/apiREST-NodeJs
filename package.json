@@ -1,0 +1,28 @@
+{
+  "name": "apirest-nodejs",
+  "version": "1.0.0",
+  "description": "Serveur HTTP pour API REST",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rroot47/apiREST-NodeJs.git"
+  },
+  "keywords": [
+    "server",
+    "http",
+    "api",
+    "rest"
+  ],
+  "author": "SYLLA BOUBOU",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rroot47/apiREST-NodeJs/issues"
+  },
+  "homepage": "https://github.com/rroot47/apiREST-NodeJs#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
