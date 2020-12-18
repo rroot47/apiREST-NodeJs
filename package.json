@@ -23,6 +23,9 @@
   },
   "homepage": "https://github.com/rroot47/apiREST-NodeJs#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.3.5"
   }
 }
