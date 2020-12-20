@@ -1,0 +1,24 @@
+{
+    "path": "/api/users/register",
+    "method": "POST",
+    "tags": [{
+        "description": "API for register user"
+    }],
+    "summary": "Add Users",
+    "parameters": [{
+        "name": "Add user",
+        "in": "body",
+        "description": "User that we want to create",
+        "schema": {
+            "$ref": "#/definitions/Register"
+        }
+    }],
+    "responses": {
+        "200": {
+            "description": "OK",
+            "schema": {
+                "$ref": "#/definitions/Register"
+            }
+        }
+    }
+}

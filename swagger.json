@@ -1,10 +1,114 @@
 {
-    "swaggerDefinition": {
-        "info": {
-            "title": "API Chat",
-            "description": "API Pour le chat en ligne"
-        },
-        "servers": ["http://localhost:3000/"]
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "API Chat",
+        "description": "API Pour le chat en ligne"
     },
-    "apis": ["server.js"]
+
+    "basePath": "/api",
+    "schemes": [
+        "http"
+    ],
+    "consumes": [
+        "application/json"
+    ],
+    "produces": [
+        "application/json"
+    ],
+    "paths": {
+        "/users/register": {
+            "post": {
+                "tags": [{
+                    "description": "API for register user"
+                }],
+                "summary": "Add Users",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                    "name": "Add user",
+                    "require": true,
+                    "in": "body",
+                    "description": "User that we want to create",
+                    "schema": {
+                        "$ref": "#/definitions/Register"
+                    }
+                }],
+                "responses": {
+                    "201": {
+                        "description": "User that we want to create",
+                        "schema": {
+                            "$ref": "#/definitions/Register"
+                        }
+                    }
+                }
+            }
+        },
+        "/users/login": {
+            "post": {
+                "tags": [{
+                    "description": "API for login user"
+                }],
+                "summary": "Add Users",
+                "parameters": [{
+                    "name": "Authentification user",
+                    "in": "body",
+                    "description": "New user is created",
+                    "schema": {
+                        "$ref": "#/definitions/Login"
+                    }
+                }],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/Login"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "Register": {
+            "required": [
+                "email",
+                "username",
+                "password",
+                "bio"
+            ],
+            "properties": {
+                "email": {
+                    "type": "string"
+                },
+                "username": {
+                    "type": "string"
+                },
+                "password": {
+                    "type": "string"
+                },
+                "bio": {
+                    "type": "string"
+                }
+            }
+        },
+        "Login": {
+            "required": [
+                "email",
+                "password"
+            ],
+            "properties": {
+                "email": {
+                    "type": "string"
+                },
+                "password": {
+                    "type": "string"
+                }
+            }
+        }
+    }
 }
